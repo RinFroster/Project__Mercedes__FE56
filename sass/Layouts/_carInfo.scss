@@ -1,0 +1,50 @@
+body {
+    background-color: $base-color;
+}
+.carInfo {
+    font-family: Helvetica;
+    opacity: 0;
+    transition: .5s;
+    @include styleText ($fs-0 - 3px, $text-on-base-color, $fw-normal);
+    padding: 2.5rem 1.53rem ;
+    letter-spacing: 1px;
+    .firstInfo {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        .twoFirstItem {
+            display: flex;
+            span.space {
+                display: inline-block;
+                width: 2rem;
+            }   
+            i.fa {
+                font-size: $fs-0 - 1px;
+            }
+        }
+    }
+    .infoContent {
+        sub {
+            font-size: $fs-0 - 3px;
+            top: -4px;
+        }
+    }
+    &[data-scroll="in"]{
+        opacity: 1;
+        transform: scale(1);
+        transition-delay: 0.8s;
+    }
+
+}
+
+@include responsive('small') {
+    .carInfo {
+        .firstInfo {
+            .twoFirstItem {
+                flex-direction: column;
+               .firstInfo__item{
+                    margin-bottom: .3rem;
+                }
+            }
+        }
+    }
+}

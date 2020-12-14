@@ -1,0 +1,201 @@
+
+.sideNav {   
+    font-family: Helvetica;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20%;
+    background-color:#1f1f1f;
+    position: fixed;
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: $fs-1;
+        i.fa-car {
+            font-size: 1.8rem;
+        }
+        i {
+            font-size: $fs-2;
+            margin-right: 10px;
+        }}
+
+    }
+    .sideNav-item {
+        width: 250px;
+        height: 50px;
+        display: block;
+        padding: 10px 5px;
+        text-align: left;
+        border-bottom: 1px solid black;
+        transition: all .3s;
+        .navIcons {
+            display: flex;
+            span {
+                display: none;
+            }
+            .icons {
+                margin-left: 10px;
+                i:hover{
+                    color: $theme-primary;
+                }
+            }
+        }
+        .config {
+            display: flex;
+            img {
+                width: 1.8rem;
+                height: 1.8rem;
+                margin-right: 10px;
+            } 
+            span {
+                padding-top: 10px;
+            } 
+        }
+ 
+        &:hover{
+            background-color: #1f1f1f;
+            transform: translateX(-160px);
+        }
+        #shareCheckbox {
+            display: none;
+        }
+    } 
+
+// 1280px
+@include responsive('extra-large'){
+    .sideNav{
+        right: -17%;
+    }
+} 
+
+// 1170px
+@media screen and (max-width: 1170px){
+    .sideNav{
+        right: -16.5%;
+    }
+}
+
+// 1024px
+@include responsive('large'){
+    .sideNav{
+        right: -15.7%;
+    }
+} 
+// 768px
+@include responsive('medium'){
+    .sideNav {
+        top: 93%;
+        left: 0;
+        max-height: 150px;
+        width: 100%;
+        white-space: nowrap;
+        display: inline-flex;
+        
+        a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            i.fa-car {
+                font-size: 1.8rem;
+            }
+            i {
+                font-size: $fs-2;
+                margin-right: 10px;
+            }
+        }
+        .sideNav-item {
+            background-color:#1f1f1f;
+            min-height: 80px;
+            width: 33.33%;
+            border-bottom: 1px solid black;
+            transition: all .3s;
+            text-align: center;
+            border: 1.5px solid $base-color;
+            z-index: 1;
+            .transparentNav{
+                height: 100%;
+            }
+            span{
+                font-size: $fs-1;
+                display: block;
+            }
+            .config {
+                display: block;
+                img {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin-left: 40%;
+                } 
+            }
+  
+            &:hover{
+                background-color: #1f1f1f;
+                transform: none;
+            }
+            &:last-child{  
+                padding-left: 16%;
+                position: relative;
+                z-index: 1;
+                i {
+                    max-height: 40px;
+                    display: block; 
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+                }  
+                            
+                span {
+                    padding-left: -5px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 45%;
+                    max-height: 20px;
+                    cursor: pointer;
+
+                }
+                #shareCheckbox {
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    width: 100%;
+                    height: inherit;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .icons {
+                    min-width: 120%;
+                    overflow: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    left: -4.5%;
+                    transform: translateY(0);                       
+                    transition: 1s;
+                    z-index: 0;
+                    i {
+                        background-color:#1f1f1f;
+                        min-height: 80px;
+                        padding-top: 10px;
+                    }
+                }
+                input:checked~ .icons{
+                
+                    min-width: 120%;
+                    display: block;
+                    opacity: 1;
+                    position: absolute;
+                    left: -4.5%;
+                    transform: translateY(-320px);                       
+                    transition: 1s;
+                    i {
+                        background-color:#1f1f1f;
+                        min-height: 80px;
+                        padding-top: 10px;
+                    }             
+                }
+            }
+
+        }
+}
+}
