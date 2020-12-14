@@ -1,0 +1,38 @@
+.carousel__prevArrow{
+    @include styleText($fs-0,$base-color,$fw-normal);
+}
+
+.carousel__prevArrow{
+    position: absolute;
+    left: 52px;
+    top: 43%;
+    font-size: $fs-5;
+    color: $text-on-theme-primary;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.25s;
+    &:active{
+        color: $theme-active;
+    }
+}
+
+// responsive carousel__prevArrow 1280px
+@include responsive ('extra-large'){
+    .carousel__prevArrow{
+        top: 40%;
+        left: 30px;
+    }
+}
+
+// responsive carousel__prevArrow 480px
+@include responsive ('small'){
+    .carousel__prevArrow{
+        top: 25%;
+        left: 20px;
+    }
+}

@@ -1,0 +1,93 @@
+.facilities{
+    .facilities__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 92%;
+        margin: 0 auto;
+        margin-top: 3.33rem;
+        opacity: 0;
+        transition:0.5s;
+        transform: scale(1);
+        &[data-scroll="in"]{
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.8s;
+        }
+        .facilities__items{
+            position: relative;
+            .facilities__pic{
+                position: relative;
+                a{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .facilities__links{
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        height: 0;
+                        width: 100%;
+                        background-color: $theme-primary;
+                        display: block;
+                        transition: height 0.16s, opacity 0.16s;
+                        opacity: 0;
+                    }
+                }
+                &:hover .facilities__links:after{
+                    height: 7px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// responsive max-width:1280px
+@include responsive ('extra-large'){
+    .facilities{
+        .facilities__content{
+            width: 79%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// responsive max-width:1024px
+@include responsive ('large'){
+    .facilities{
+        .facilities__content{
+            width: 73%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// responsive max-width:768px
+@include responsive ('medium'){
+    .facilities{
+        .facilities__content{
+            width: 92%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+            .facilities__items{
+                padding-left: 0.33rem;
+                padding-right: 0.33rem;
+                margin-bottom: 0.66rem;
+            }
+        }
+    }
+}
+
+// responsive max-width:480px
+@include responsive ('small'){
+    .facilities{
+        .facilities__content{
+            width: 88%;
+        }
+    }
+}

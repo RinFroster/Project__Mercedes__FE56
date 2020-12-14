@@ -1,0 +1,35 @@
+.carousel__nextArrow{
+    @include styleText($fs-0,$base-color,$fw-normal);
+}
+
+.carousel__nextArrow{
+    position: absolute;
+    right: 30px;
+    top: 43%;
+    font-size: $fs-5;
+    color: $text-on-theme-primary;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: color 0.25s;
+    &:active{
+        color: $theme-active;
+    }
+}
+
+// responsive carousel__nextArrow 1280px
+@include responsive ('extra-large'){
+    .carousel__nextArrow{
+        top: 40%;
+    }   
+}
+
+// responsive carousel__nextArrow 480px
+@include responsive ('small'){
+    .carousel__nextArrow{
+        top: 25%;
+    }   
+}

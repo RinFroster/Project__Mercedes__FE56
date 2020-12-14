@@ -1,0 +1,18 @@
+.carousel__button{
+    button{
+        @include styleButton($button-base-color,$button-base-color,$pd-1 + 1,$pd-1 + 2);
+        @include styleText($fs-0,$button-text-color,$fw-normal);
+        &:hover{
+        @include styleHoverButtuon($button-hover-color,$button-hover-color,$button-text-color);
+    }
+    }
+}
+.intro__button{
+    button{
+        @include styleButton($theme-primary,$theme-primary,$pd-0 + 1,$pd-1 + 1);
+        @include styleText($fs-0,$button-text-color,$fw-normal);
+        &:hover{
+        @include styleHoverButtuon($theme-active,$theme-active,$button-text-color);
+    }
+    }
+}
