@@ -1,0 +1,55 @@
+.informed {
+    font-family: Helvetica;
+    opacity: 0;
+    transition: .5s;
+    @include styleText ($fs-0 - 3px, $text-on-base-color, $fw-normal);
+    padding: 2.5rem 1.53rem ;
+    letter-spacing: 1px;
+    padding-top: 0;
+    h1 {
+        font-family: Playfair+Display;
+        @include styleText (2rem,$text-on-base-color, $fw-normal);
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.4);
+    }
+
+    .informedContent {
+        p {
+            @include styleText ($fs-0 - 3px,$link-on-base-color, $fw-normal);
+            padding-top: 1.5rem;
+        }
+    
+        i.fab {
+            @include styleText (1.5rem,$link-on-base-color, $fw-normal);
+            padding-right: 2.5rem;
+            padding-top: 1rem;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                @include styleText (1.5rem,$theme-primary, $fw-normal);
+            }
+        }
+    }
+    &[data-scroll="in"]{
+        opacity: 1;
+        transform: scale(1);
+        transition-delay: 0.8s;
+    }
+
+}
+@include responsive('extra-large')  {
+    .informed {
+        padding-bottom: 5rem;
+    }
+}
+
+@include responsive('large') {
+    .informed {
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2.28571rem;
+        }
+    }
+}
+
+
