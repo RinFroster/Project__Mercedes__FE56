@@ -58,7 +58,11 @@ header{
                             text-decoration: none;
                             font-family: $ff-0;
                             color: $text-on-theme-primary;
+                            &:hover{
+                                font-size: $fs-0;
+                            }
                         }
+                        
                     }
                 }
             }
@@ -70,6 +74,9 @@ header{
                             text-decoration: none;
                             font-family: $ff-0;
                             color: $text-on-theme-primary;
+                            &:hover{
+                                font-size: $fs-0;
+                            }
                         }
                     }
                 }
@@ -109,6 +116,7 @@ header{
                         font-weight: $fw-bold-0;
                         color: $text-on-theme-primary;
                         &:hover{
+                            font-size: $fs-0;
                             color: $theme-primary;
                         }
                     }
@@ -213,6 +221,10 @@ header{
                         .nav-link{
                             padding-left: 5rem;
                             font-size: $fs-3;
+                            &:hover{
+                                font-size: $fs-3;
+                                color: $theme-primary;
+                            }
                         }
                     }
                 }

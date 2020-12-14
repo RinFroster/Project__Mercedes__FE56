@@ -51,6 +51,10 @@ section{
         }
         a{
             color: $theme-primary;
+            &:hover{
+                text-decoration: underline;
+                font-size: $fs-1;
+            }
         }
         .intro__button{
             margin-top: 2.667rem;
