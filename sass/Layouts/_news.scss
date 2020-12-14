@@ -11,6 +11,7 @@ img {
             justify-content: center;
             border: none;
             .nav-item {
+                opacity: 0;
                 &:hover {
                     .nav-link {
                         border: none;
@@ -39,6 +40,7 @@ img {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2px;
+                opacity: 0;
                 .news__item1 {
                     grid-column: 1 / span 2;
                     grid-row: 1 / span 2;
@@ -146,6 +148,23 @@ img {
                     }
                 }
             }
+        }
+    }
+}
+
+.news{
+    .nav{
+        .nav-item[data-scroll="in"]{
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.8s;
+        }
+    }
+    .tab-content{
+        .news__row[data-scroll="in"]{
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.8s;
         }
     }
 }
