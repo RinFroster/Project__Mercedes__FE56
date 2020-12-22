@@ -200,3 +200,9 @@
         }
 }
 }
+
+@include responsive ('small'){
+    .sideNav{
+        top: 94%;
+    }
+}

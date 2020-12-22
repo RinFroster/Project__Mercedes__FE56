@@ -2095,4 +2095,10 @@ footer[data-scroll="in"] {
     padding-top: 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .sideNav {
+    top: 94%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
